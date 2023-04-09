@@ -1,0 +1,632 @@
+:root {
+    --yellow: #E79A00;
+    --brown: #5A1902;
+  }
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
+.container{
+    width: 90%;
+    margin: auto;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+
+color: white;}
+button:hover{
+    cursor: pointer;
+}
+/* NAVAR */
+.mobile-nav{
+    display: none;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+
+}
+nav{
+    width: 40%;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchBox{
+    position: relative;
+    width: 200px;
+    right: 0;
+}
+.searchBar{
+    width: 200px;
+    padding: 4px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 5px;
+    border: none;
+    padding-left: 10px;
+}
+.searchIcon{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    display: inline-block;
+    background-color: var(--yellow);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    color: white;
+}
+.searchIcon a{
+    color: white;
+}
+.searchIcon:hover{
+    cursor: pointer;
+}
+.hamBurger{
+    display: block;
+    width: 5px;
+    cursor: pointer;
+    z-index: 10;
+}
+.mobile-nav{
+    position: absolute;
+    top: 0;
+    width: 95vw;
+    height: 300px;
+    background-color: black;
+}
+.mobile-nav ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.mobile-nav li{
+    border-bottom: 1px solid white;
+    width: 80%;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.visible{
+    display: block;
+}
+
+/* HOME */
+.home{
+    background-image: url('images/Image\ with\ organic\ figues-Home\ page.jpg');
+
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .text{
+    background-color: black;
+    width: 70%;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    opacity: 0.7;
+}
+.home h1{
+    width: fit-content;  
+    color: aqua;
+    font-size: 60px;
+    opacity: 1;
+}
+
+/* SLIDER */
+.slider{
+
+}
+.slider h2{
+    text-align: center;
+    margin-top: 20px;
+}
+.sliderContainer{
+    height: 400px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.slide{
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    background-size: cover;
+}
+.sliderImage{
+width: 200px;
+height: 200px;
+border-radius: 50%;
+border: 10px solid var(--yellow);
+}
+.slideContent{
+    width: 50%;
+}
+.slideContent h3{
+    margin: 10px 0;
+}
+.slide button{
+    margin-top: 20px;
+    padding: 5px 10px;
+    border: 1px solid var(--yellow);
+    font-weight: bold;
+    font-size: 20px;
+}
+.slide button:hover{
+    background-color: var(--yellow);
+    color: white;
+}
+
+.prev, .next{
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    height: 50px;
+    width: 30px;
+    color: white;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prev:hover, .next:hover{
+    cursor: pointer;
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+
+/* ARTICLES */
+
+.articles{
+background-image: url('images/Background\ Image\ of\ Articles\ in\ home\ page.jpg');
+height: 350px;
+position: relative;
+color: white;
+padding-top: 20px;
+}
+.articles::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    opacity: 0.9;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.articles h1{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+}
+.articleContent{
+    position: absolute;
+    border: 1px solid white;
+    /* height: 150px; */
+    color: white;
+    margin: 60px auto;
+    width: 90%;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+}
+.articleContent p{
+    margin: 50px auto;
+}
+.quoteMark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--yellow);
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 30px;
+}
+.articleBtn{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--yellow);
+    color: var(--yellow);
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.articleBtn:hover{
+    background-color: var(--yellow);
+    color: white;
+}
+
+/* SOCIAL */
+.social{
+    position: relative;
+    height: 400px   ;
+}
+.social .h2{
+ font-size: 30px;
+}
+.social h3{
+    font-size: 20px;
+    display: inline-block;
+    padding-left: 10px;
+}
+.social .container{
+    width: 60%;
+    height: 500px;
+    background-color: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50px 80px;
+    align-items: flex-start;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -40px;
+    display: flex;
+    gap: 50px;
+}
+    
+.social .icon{
+    padding: 20px 0;
+    font-size: 40px;
+    color: black;
+}
+.searchIcons .text{
+ 
+    
+}
+
+/* RENTALS */
+.rentals{
+    background-color: black;
+    height: 100vh;
+    color: white;
+}
+.rentals header{
+    padding: 100px 80px 30px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rentals h1{
+    font-size: 40px;
+}
+.rental-1{
+    height: 60vh;
+    margin: auto;
+    text-align: center;
+}
+
+.rental-image-1{
+    width: 90%;
+    background-size: cover;
+}
+.dark{
+    color: black;
+}
+.rental-content-1{
+    margin: 350px auto 30px auto;
+    padding: 20px 0;
+    width: 90%;
+}
+.rental-content-2{
+    background-color: black;
+    color: white;
+    height: fit-content;
+}
+.rental-content-2 .container{
+    display: flex;
+    position: relative;
+}
+
+.left{
+    flex-basis: 50%;
+    background-size: cover;
+    margin: -30px 0;
+}
+.left img{
+    width: 100%;
+    height: 570px;
+}
+.right{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    font-size: 18px;
+}
+.btnDiv{
+    width: 100%;
+text-align: left;
+}
+.right button{
+    padding: 5px 10px;
+}
+.right button:hover{
+    background-color: var(--yellow);
+    color: white;
+}
+
+/* RENTAL CONTENT 3 */
+.rental-content-3{
+    margin-top: 100px;
+    height: fit-content;
+}
+.rental-content-3 p{
+    margin: 20px 0;
+}
+.images{
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    height: 400px;
+    gap: 10px;
+    justify-content: center;
+}
+.images img{
+    width: 100%;
+    background-size: cover;
+}
+
+/* CONTACT */
+
+.contact{
+    height: 100vh;
+    /* margin-top: 40px;    */
+}
+.contact .container{
+    width: 100%;
+}
+.contact header{
+    background-color: black;
+    padding: 20px;
+    display: block;
+    text-align: right;
+    width: 100%;
+}
+
+.contact-form{
+    height: 450px;
+    width: 400px;
+    background-color: var(--yellow);
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact-form h1{
+    text-align: left;
+    padding-left: 40px;
+    width: 100%;
+    color: var(--brown);
+}
+.contact-form input{
+    color: var(--brown);
+    font-size: 18px;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--brown);
+    padding: 5px;
+    width: 80%;
+}
+.contact-form input::placeholder{
+    color: var(--brown);
+
+}
+
+.contact-form button{
+    padding: 10px 20px;
+    width: 100px;
+    border: none;
+    color: var(--brown);
+    font-weight: bold;
+    font-size: 18px;
+}
+.contact-form button:hover{
+    background-color: var(--brown);
+    color: var(--yellow);
+}
+
+/* SOURCE TABLE */
+.source h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.table{
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    margin: auto;
+    width: 80%;
+}
+
+.row{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    margin: 10px 0;
+    gap: 50px;
+    color: black;
+    /* flex-flow: column wrap; */
+}
+.head , .head .col{
+    border: 1px soid black;
+    height: 40px;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+.head{
+    border: 1px solid black;
+}
+.col-1{
+    width: 30%;
+    overflow: hidden;
+}
+.col-2{
+    max-width: 50%;
+}
+.col-2 a{
+    text-decoration: none;
+    color: blue;
+}
+
+.table img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+@media (max-width: 980px) {
+    cite{
+        display: none;
+    }
+    .rental-content-2 .container{
+        flex-direction: column;
+    }
+    .rentals header{
+        flex-direction: column;
+    }
+    .rentals header img{
+        margin-top: 20px;
+    }
+    .rental-content-1{
+        margin: 200px auto 30px auto;
+    }
+    .home .text h1{
+        font-size: 40px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .images{
+        flex-direction: column;
+        margin: 50px auto;
+        width: 70%;
+    }
+    .rental-content-1{
+        margin: 100px auto 30px auto;
+    }
+    .rental-1 p{
+        padding-top: 50px;
+    }
+    .hamBurger{
+        display: block;
+        z-index: 6;
+    }
+    .hide{
+        display: none;
+    }
+    .mobile-nav{
+        position: absolute;
+        top: 0;
+        width: 95vw;
+        height: 300px;
+        background-color: black;
+    }
+    .mobile-nav ul{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+    }
+    .mobile-nav li{
+        border-bottom: 1px solid white;
+        width: 80%;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    .visible{
+        display: block;
+    }
+    .table{
+        margin: auto;
+    }
+    .table .row{
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+    }
+    .home .text h1{
+        font-size: 30px;
+    }
+    .head .col-2{
+        display:none;
+    }
+    .col-2{
+        max-width: none;
+    }
+  }
+
